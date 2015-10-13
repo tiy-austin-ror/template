@@ -14,7 +14,7 @@ gem_group :production do
 end
 
 if yes?("Using Bootstrap?")
-  gem 'boostrap-sass', '~> 3.3.5'
+  gem 'bootstrap-sass', '~> 3.3.5'
 else
   if yes?("Using Materialize?")
     gem 'materialize-sass'
