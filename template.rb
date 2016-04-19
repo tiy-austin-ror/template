@@ -4,7 +4,7 @@ VERSION = '0.1.1'
 
 ruby_version = '2.3.0'
 insert_into_file "Gemfile", "ruby '#{ruby_version}'", after: "source 'https://rubygems.org'\n"
-
+insert_into_file "Gemfile", "  gem 'pry-rails'\n", after: "gem 'byebug'\n"
 
 if yes?("Using Bootstrap?")
   gem 'bootstrap-sass', '~> 3.3.5'
@@ -39,4 +39,3 @@ after_bundle do
   git add: "."
   git commit: %Q{ -m 'Initial commit of TIY Rails Generator v#{VERSION}' }
 end
-
