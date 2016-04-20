@@ -11,7 +11,6 @@ if yes?("Using Bootstrap?")
 else
   if yes?("Using Materialize?")
     gem 'materialize-sass'
-    insert_into_file "app/assets/javascripts/application.js", "//= require materialize-sprockets\n", after: "//= require turbolinks\n"
 
   end
 end
