@@ -11,12 +11,14 @@ if yes?("Using Bootstrap?")
 else
   if yes?("Using Materialize?")
     gem 'materialize-sass'
+
   end
 end
 
 gem 'faker'
 gem 'kaminari'
 gem 'bcrypt'
+gem 'react-rails', '~> 1.6.0'
 
 gem_group :production do
   gem 'puma'
@@ -35,6 +37,7 @@ end
 rake("db:create")
 
 after_bundle do
+  run "rails g react:install"
   git :init
   git add: "."
   git commit: %Q{ -m 'Initial commit of TIY Rails Generator v#{VERSION}' }
