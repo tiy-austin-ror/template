@@ -11,7 +11,6 @@ if yes?("Using Bootstrap?")
 else
   if yes?("Using Materialize?")
     gem 'materialize-sass'
-
   end
 end
 
